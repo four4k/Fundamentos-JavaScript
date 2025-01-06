@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar e Ocultar Texto</title>
+</head>
+<body>
+  <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum in voluptas cumque ad quidem, reprehenderit perferendis vero, minima earum optio provident dolore minus, neque nisi perspiciatis nesciunt hic molestias amet?</p>
+  <input type="button" value="Mostrar" id="show">
+  <input type="button" value="Esconder" id="hide">
+  <script>
+    let show = document.getElementById("show");
+    let hide = document.getElementById("hide");
+    let paragraph = document.getElementById("paragraph")
+    show.addEventListener("click", showIt);
+    hide.addEventListener("click", hideIt);
+
+    function showIt() {
+      paragraph.style.visibility = "visible";
+    }
+
+    function hideIt(){
+      paragraph.style.visibility = "hidden";
+    }
+  </script>
+</body>
+</html>

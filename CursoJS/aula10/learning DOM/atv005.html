@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campo de Texto Interativo</title>
+</head>
+<body>
+  <input type="text" name="textInput" id="textInput">
+  <span id="spanCount">0</span>
+  <script>
+    let textInput = document.getElementById("textInput")
+    let spanCount = document.getElementById("spanCount")
+
+    textInput.addEventListener("input", counting)
+    
+    function counting() {
+      let valuetext = textInput.value.length
+      spanCount.textContent = valuetext
+    }
+  </script>
+</body>
+</html>

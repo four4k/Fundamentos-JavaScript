@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Dinâmica</title>
+</head>
+<body>
+  <input type="text" id="textlist" name="textlist">
+  <input type="button" value="Adicionar" id="submit">
+  <ul id="list">
+  </ul>
+  <script>
+    let add = document.getElementById("submit")
+    let list = document.getElementById("list")
+    let textlist = document.getElementById("textlist")
+    add.addEventListener("click", dropadd)
+
+    function dropadd() {
+      let textvalue = textlist.value
+      let newtext = document.createElement("li")
+      newtext.textContent = textvalue
+      list.appendChild(newtext)
+      textlist.value = ""
+    }
+  </script>
+</body>
+</html>

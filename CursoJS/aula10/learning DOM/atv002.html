@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de CLiques</title>
+  <style>
+    #number {
+      height: 200px;
+      width: 200px;
+      background-color: aquamarine;
+      text-align: center;
+      align-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="number">0</div>
+  <script>
+    let couting = document.getElementById("number")
+    couting.addEventListener("click", CoutingClick)
+    let n = 0
+    function CoutingClick(){
+      ++n
+      couting.innerHTML = n
+    }
+  </script>
+</body>
+</html>
