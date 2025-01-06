@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar o Título da Página</title>
+</head>
+<body>
+  <h1 id="Title">Título</h1>
+  <label for="">Mudar Titulo: </label>
+  <input type="text" name="newtitle" id="newtitle">
+  <script>
+    let Nt = document.getElementById("Title")
+    Nt.addEventListener("click", ClickNew)
+
+    function ClickNew() {
+      let Ot = document.getElementById("newtitle")
+      let Text = Ot.value
+      Title.innerHTML = Text
+    }
+  </script>
+</body>
+</html>
