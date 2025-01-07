@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar o conteúdo de um elemento</title>
+</head>
+<body>
+  <p id="paragraph" >Texto original do parágrafo.</p>
+
+  <script>
+    let paragraph = document.getElementById("paragraph")
+
+    document.addEventListener("DOMContentLoaded", function() {
+      paragraph.innerHTML = "O conteúdo do parágrafo foi alterado!"
+    })
+  </script>
+</body>
+</html>

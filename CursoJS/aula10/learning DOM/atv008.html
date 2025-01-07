@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>Tarefa 1 <button id="btn">Remover</button></li> 
+    <li>Tarefa 2 <button id="btn">Remover</button></li>
+    <li>Tarefa 3 <button id="btn">Remover</button></li>
+</ul>
+<script>
+  let btn = document.querySelectorAll("#btn")
+
+  btn.forEach(function(button){
+    button.addEventListener("click", remove)
+    function remove(){
+      button.parentElement.remove()
+    }
+  })
+</script>
+</body>
+</html>
