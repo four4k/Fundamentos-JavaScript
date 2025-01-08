@@ -1,0 +1,57 @@
+### Exercícios para Praticar DOM
+
+Com base nos arquivos enviados e no que você já estudou, aqui estão alguns exercícios novos e simples para treinar manipulação de DOM:
+
+---
+
+#### **Exercício 1: Alterar o Título da Página**
+Crie um script que:
+1. Seleciona o título `<h1>` da página.
+2. Permite alterar o texto desse título ao clicar nele.
+3. Dica: Use o método `addEventListener`.
+
+---
+
+#### **Exercício 2: Contador de Cliques**
+Adicione um botão à página que:
+1. Conta quantas vezes ele foi clicado.
+2. Mostre o número de cliques em um `<div>`.
+
+---
+
+#### **Exercício 3: Alteração de Cores**
+Crie uma lista de itens (`<ul><li>`).  
+1. Ao clicar em cada item da lista, a cor de fundo desse item muda para uma cor aleatória.
+2. Use a função `Math.random()` para gerar as cores.
+
+---
+
+#### **Exercício 4: Mostrar e Ocultar Texto**
+Adicione dois botões à página: "Mostrar" e "Ocultar".  
+1. Eles devem mostrar ou ocultar um parágrafo de texto ao serem clicados.
+2. Dica: Use a propriedade `style.display`.
+
+---
+
+#### **Exercício 5: Campo de Texto Interativo**
+Crie um campo de texto (`<input type="text">`) que:
+1. Mostra a quantidade de caracteres digitados em tempo real em um `<span>` ao lado do campo.
+2. Use o evento `input`.
+
+---
+
+#### **Exercício 6: Lista Dinâmica**
+Adicione uma lista vazia (`<ul>`) à página e:
+1. Um campo de texto e um botão "Adicionar".  
+2. Ao clicar no botão, um novo item deve ser adicionado à lista com o texto digitado no campo.
+
+---
+
+#### **Exercício 7: Alterar Imagem**
+Adicione uma imagem à página (`<img>`) e dois botões:
+1. Um botão muda a imagem para outra.
+2. O outro restaura a imagem original.
+
+---
+
+Se precisar de dicas ou exemplos, me avise! 😊
