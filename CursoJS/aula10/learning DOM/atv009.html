@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <h1>Gerenciador de Tarefas</h1>
+  <input type="text" name="newTfT" id="newTfT">
+  <input type="button" value="Adicionar Tarefa" id="addingTask">
+  <ul id="list"></ul>
+  <input type="button" value="Limpar Lista" id="cleaningList">
+  <script>
+    let newTfT = document.getElementById("newTfT")
+    let addingTask = document.getElementById("addingTask")
+    let list = document.getElementById("list")
+    let cleaningList = document.getElementById("cleaningList")
+
+    addingTask.addEventListener("click", addTextforList)
+    cleaningList.addEventListener("click", clearList )
+
+    function addTextforList() {
+      if (newTfT.value == ""){
+        window.alert("Por favor, insira uma tarefa!")
+      } else {
+        let getText = newTfT.value
+        let createElementList = document.createElement("li")
+        let createElementBtn = document.createElement("button")
+
+        createElementList.textContent = getText
+        createElementBtn.textContent = "Remover"
+
+        createElementList.appendChild(createElementBtn)
+        list.appendChild(createElementList)
+
+        createElementList.addEventListener("click", function (){
+          if (createElementList.style.color === "red") {
+            createElementList.style.color = "black"
+            createElementList.style.textDecoration = "none"
+          }else{
+            createElementList.style.color = "red"
+            createElementList.style.textDecoration = "line-through"
+          }
+        })
+          // Codigo ChatGPT
+          createElementBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          createElementBtn.parentElement.remove();
+        });
+
+        createElementBtn.addEventListener("click", remove)
+        function remove(){
+          createElementBtn.parentElement.remove()
+        }
+
+        newTfT.value = "";
+      }
+    }
+    function clearList() {
+      list.innerHTML = "";
+    }
+  </script>
+</body>
+</html>

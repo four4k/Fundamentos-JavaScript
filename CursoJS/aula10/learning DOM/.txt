@@ -1,0 +1,52 @@
+### Exercício: *Mini-Projeto de Interatividade no DOM*
+
+Crie uma página com os seguintes requisitos para testar seus conhecimentos sobre o básico de DOM:
+
+---
+
+#### *Descrição do Projeto: Gerenciador de Tarefas*
+
+1. *Estrutura HTML Inicial:*
+   - Um título <h1>: "Gerenciador de Tarefas".
+   - Um campo de texto (<input type="text">) para o usuário adicionar uma nova tarefa.
+   - Um botão "Adicionar Tarefa".
+   - Uma lista de tarefas vazia (<ul>).
+   - Um botão "Limpar Lista".
+
+---
+
+#### *Funcionalidades a Implementar:*
+
+1. *Adicionar Tarefas:*
+   - Quando o usuário digitar uma tarefa no campo e clicar no botão "Adicionar Tarefa", a tarefa deve ser adicionada como um item (<li>) na lista.
+   - Se o campo de texto estiver vazio, exiba um alerta dizendo "Por favor, insira uma tarefa!".
+
+2. *Marcar Tarefas como Concluídas:*
+   - Ao clicar em um item da lista, ele deve ser marcado como concluído (ex: muda a cor ou risca o texto com text-decoration: line-through).
+
+3. *Remover Tarefas Individualmente:*
+   - Adicione um botão "Remover" ao lado de cada tarefa para excluí-la da lista.
+
+4. *Limpar Lista:*
+   - Ao clicar no botão "Limpar Lista", todas as tarefas devem ser removidas.
+
+---
+
+#### *Requisitos Técnicos:*
+
+- Utilize *seletores DOM* para acessar os elementos (getElementById, querySelector, etc.).
+- Manipule as *propriedades de estilo* (style) para marcar tarefas como concluídas.
+- Use *event listeners* para capturar cliques ou ações no DOM.
+- Use *loops*, se necessário, para interagir com múltiplos elementos.
+- Garanta que o código seja reutilizável e organizado (ex: crie funções separadas para cada funcionalidade).
+
+---
+
+#### *Dicas:*
+- Utilize createElement e appendChild para criar novos elementos na lista.
+- Use parentNode ou removeChild para excluir tarefas.
+- Teste a funcionalidade com diferentes entradas para garantir que tudo está funcionando corretamente.
+
+---
+
+Quando finalizar, você terá passado por todos os conceitos básicos do DOM: seleção, manipulação de elementos, eventos e navegação na árvore. 🚀
