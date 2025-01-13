@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Contagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #contador {
+      font-size: 2em;
+      margin: 20px;
+      display: inline-block;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>  
+</head>
+<body>
+  <h1>Controle de Contagem</h1>
+  <span id="contador">0</span>
+  <br>
+  <button id="btnAumentar" title="Aumentar o contador">Aumentar</button>
+  <button id="btnDiminuir" title="Diminuir o contador">Diminuir</button>
+  <button id="btnResetar" title="Resetar o contador">Resetar</button>
+  <script>
+    let contador = document.getElementById("contador")
+    let btnAumentar = document.getElementById("btnAumentar")
+    let btnDiminuir = document.getElementById("btnDiminuir")
+    let btnResetar = document.getElementById("btnResetar")
+    let n = 0
+
+    btnAumentar.addEventListener("click", aumentar)
+    btnDiminuir.addEventListener("click", diminuir)
+    btnResetar.addEventListener("click", resetar)
+    document.addEventListener("DOMContentLoaded", ajustarCor);
+
+    function aumentar() {
+      n++;
+      contador.textContent = n;
+      ajustarCor();
+    }
+
+    function diminuir() {
+      n--;
+      contador.textContent = n;
+      ajustarCor();
+    }
+
+    function resetar() {
+      n = 0;
+      contador.textContent = n;
+      ajustarCor();
+    }
+
+    function ajustarCor() {
+      if (n > 0) {
+        contador.style.color = "green";
+      } else if (n < 0) {
+        contador.style.color = "red";
+      } else {
+        contador.style.color = "black";
+      }
+    }
+  </script>
+</body>
+</html>

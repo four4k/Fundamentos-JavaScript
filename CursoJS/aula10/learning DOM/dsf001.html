@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: Arial, sans-serif;
+    }
+    .nBtn {
+      width: 70px;
+      height: 60px;
+      padding: 0px;
+      margin-block: 5px;
+    }
+    .fBtn {
+      width: 35px;
+      padding: 0px;
+      margin-block: 5px;
+    }
+    #calculator {
+      display: flex;
+      justify-content: start;
+    }
+    #numbers{
+      width: 230px;
+      height: 280px;
+      padding-left: 4px;
+    }
+    #functions {
+      display: inline-grid;
+      justify-content: center;
+      width: 35px;
+      height: 280px;
+    }
+    .btnLimpar {
+      width: 144px;
+      height: 60px;
+      padding: 0px;
+    }
+    #resultado {
+      font-size: 40px;
+      
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  <div id="resultado" class="fBtn"></div>
+  <section id="calculator">
+    <section id="functions">
+      <button id="btnSoma" class="fBtn">+</button>
+      <button id="btnSubtrai" class="fBtn">-</button>
+      <button id="btnMultiplica" class="fBtn">*</button>
+      <button id="btnDivide" class="fBtn">/</button>
+    </section>
+    <section id="numbers">
+      <input class="nBtn" type="button" id="1" value="1">
+      <input class="nBtn" type="button" id="2" value="2">
+      <input class="nBtn" type="button" id="3" value="3">
+      <input class="nBtn" type="button" id="4" value="4">
+      <input class="nBtn" type="button" id="5" value="5">
+      <input class="nBtn" type="button" id="6" value="6">
+      <input class="nBtn" type="button" id="7" value="7">
+      <input class="nBtn" type="button" id="8" value="8">
+      <input class="nBtn" type="button" id="9" value="9">
+      <input class="nBtn" type="button" id="0" value="0">
+      <button class="btnLimpar">Limpar</button>
+    </section>
+  </section>
+  <script>
+  // Lógica aqui!
+  </script>
+</body>
+</html>
