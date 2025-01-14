@@ -54,7 +54,7 @@
     <section id="functions">
       <button id="btnSoma" class="fBtn">+</button>
       <button id="btnSubtrai" class="fBtn">-</button>
-      <button id="btnMultiplica" class="fBtn">*</button>
+      <button id="btnMultiplica" class="fBtn">x</button>
       <button id="btnDivide" class="fBtn">/</button>
     </section>
     <section id="numbers">
@@ -68,11 +68,78 @@
       <input class="nBtn" type="button" id="8" value="8">
       <input class="nBtn" type="button" id="9" value="9">
       <input class="nBtn" type="button" id="0" value="0">
-      <button class="btnLimpar">Limpar</button>
+      <button class="btnLimpar" id="btnLimpar">Limpar</button>
     </section>
   </section>
   <script>
-  // Lógica aqui!
+
+  let btnSoma = document.getElementById("btnSoma");
+  let resultado = document.getElementById("resultado");
+  let btnLimpar = document.getElementById("btnLimpar");
+  let btnDivide = document.getElementById("btnDivide");
+  let btnSubtrai = document.getElementById("btnSubtrai");
+  let btnMultiplica = document.getElementById("btnMultiplica");
+  let numberButtons = {
+    value1: document.getElementById("1"),
+    value2: document.getElementById("2"),
+    value3: document.getElementById("3"),
+    value4: document.getElementById("4"),
+    value5: document.getElementById("5"),
+    value6: document.getElementById("6"),
+    value7: document.getElementById("7"),
+    value8: document.getElementById("8"),
+    value9: document.getElementById("9"),
+    value0: document.getElementById("0"),
+  };
+      
+  let n1 = 0;
+  let n2 = 0;
+  let step = 1;
+
+  Object.values(numberButtons).forEach(numbers => {
+    numbers.addEventListener("click", getNumbers)
+    function getNumbers(){
+      if (step === 1){
+        n1 = Number(numbers.value);
+        console.log("n1:", n1);
+        resultado.textContent = n1;
+        step = 2
+      }else if (step === 2){
+        n2 = Number(numbers.value);
+        console.log("n2:", n2);
+        resultado.textContent = n2;
+        step = 1
+      }
+    }
+  });
+
+  btnSoma.addEventListener("click", calcsum)
+  btnSubtrai.addEventListener("click", calcsub)
+  btnMultiplica.addEventListener("click", calcmult)
+  btnDivide.addEventListener("click", calcdiv)
+
+  function calcsum(){
+    let calc = n1 + n2
+    resultado.innerHTML = calc
+    console.log("soma");
+  }
+  function calcsub(){
+    let calc = n1 - n2
+    resultado.innerHTML = calc
+    console.log("sub");
+
+  }
+  function calcmult(){
+    let calc = n1 * n2
+    resultado.innerHTML = calc
+    console.log("mult");
+  }
+  
+  function calcdiv(){
+    let calc = n1 / n2
+    resultado.innerHTML = calc
+    console.log("div");
+  }
   </script>
 </body>
 </html>
